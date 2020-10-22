@@ -1,0 +1,10 @@
+<configuration>
+<property>
+<name>fs.default.name</name>
+<value>hdfs://LOCAL-ADDRESS:PORT</value>
+</property>
+<property>
+<name>hadoop.tmp.dir</name> # directory for temporary Hadoop Files. Should be unique for each worker node.
+<value>/tmp/hadoop/tmp</value>
+</property>
+</configuration>
