@@ -4,7 +4,7 @@ SparkMap produces large speed increases for:
 - [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), [BBMAP](https://jgi.doe.gov/data-and-tools/bbtools/bb-tools-user-guide/bbmap-guide/), and [HISAT2](http://daehwankimlab.github.io/hisat2/download/) for single-end mapping
 - [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) for paired-end mapping
 
-SparkMap can also function with [TopHat](https://ccb.jhu.edu/software/tophat/index.shtml) and works well with [STAR](https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf) when large numbers of machines are available.*
+SparkMap can also function with [TopHat](https://ccb.jhu.edu/software/tophat/index.shtml) and works well with [STAR](https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf) when a large number of machines are available.*
 
 ## Installation
 
