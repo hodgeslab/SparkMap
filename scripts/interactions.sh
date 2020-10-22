@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #  condense single SAM file into id, chromosome #, positional information, DNA sequence, and directional strand
 awk '{print $1,$3,$4,$2,$5;}' $1 > pair.sam
 
