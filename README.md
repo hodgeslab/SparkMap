@@ -105,7 +105,7 @@ If you are using BBMAP, please remember to explicitly specify the number of sear
    
    Make sure that the full_path_to_sam_output_directory contains the prefix file: and that the SAM output directory does not already exist(remove it if it does). Executor and        driver memory should end with G to indicate Gigabytes or MB to indicate megabytes. The logging parameter should be passed either a Y or N for Yes or No. 
    
-   Example: python singlespark.py /s1/snagaraj/project_env/SRR639031_1.fastq file:/s1/snagaraj/output/single 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome -" 
+   Example: ``` python singlespark.py /s1/snagaraj/project_env/SRR639031_1.fastq file:/s1/snagaraj/output/single 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome -" ```  
    
    See sample run file in scripts/singlespark.sh file for further examples.
 
@@ -125,7 +125,7 @@ If you are using BBMAP, please remember to explicitly specify the number of sear
    Make sure that the full_path_to_sam_output_directory contains the prefix file: and that the SAM output directory does not already exist(remove it if it does). Executor and        driver memory should end with G to indicate Gigabytes or MB to indicate megabytes.
    The logging parameter should be passed either a Y or N for Yes or No. 
    
-   Example: python pairspark.py /s1/snagaraj/project_env/SRR639031_1.fastq /s1/snagaraj/project_env/SRR639031_2.fastq file:/s1/snagaraj/output/pair 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome --interleaved -"
+   Example: ```python pairspark.py /s1/snagaraj/project_env/SRR639031_1.fastq /s1/snagaraj/project_env/SRR639031_2.fastq file:/s1/snagaraj/output/pair 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome --interleaved -" ```
 
 
 2) Run ```chmod +x pairspark.sh ``` to give permissions
@@ -156,7 +156,7 @@ Give permissions to the shell script you are using by running ```chmod +x ____.s
 
 Use interactions.sh for single-end/locally aligned SAM files and interactions_pair.sh for paired-end SAM files. These scripts are useful to create  interactions data(Hi-C) in the form:
 
-```Chr1 pos1 direction1(0 or 16 for Watson/Crick strand) Chr2 pos2 direction2```
+Chr1 pos1 direction1(0 or 16 for Watson/Crick strand) Chr2 pos2 direction2
 
 interactions.sh input example: ./interactions.sh test.sam test_interactions.txt
 interactions_pair.sh input example: ./interactions_pair.sh test.sam test1.sam test_interactions.txt
