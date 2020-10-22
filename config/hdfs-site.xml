@@ -1,0 +1,30 @@
+<configuration>
+<property>
+<name>dfs.replication</name>
+<value>1</value>
+</property>
+<property>
+<name>dfs.permission</name>
+<value>false</value>
+</property>
+
+<property>
+<name>dfs.namenode.name.dir</name> #Local directory for Namenode placement on the head/master node.
+<value>/s1/snagaraj/hadoop/name</value>
+</property>
+    <property>
+            <name>dfs.datanode.data.dir</name>
+            <value>/tmp/dataNode</value>
+    </property>
+<property>
+<name>dfs.client.block.write.replace-datanode-on-failure.policy</name>
+<value>ALWAYS</value>
+</property>
+
+<property>
+
+    <name>dfs.datanode.max.xcievers</name>
+
+    <value>4096</value>
+
+</property>
