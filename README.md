@@ -109,9 +109,9 @@ If you are using BBMAP, please remember to explicitly specify the number of sear
    
    See sample run file in scripts/singlespark.sh file for further examples.
 
-2) Run "chmod +x singlespark.sh" to give permissions
+2) Run ```chmod +x singlespark.sh ``` to give permissions
 
-3) Run ./singlespark.sh to run Spark as an interactive process or run "nohup ./singlespark.sh" to run Spark as a background process.
+3) Run ```./singlespark.sh``` to run Spark as an interactive process or run ```nohup ./singlespark.sh``` to run Spark as a background process.
 
 4) Go into your local output directory and run ``` cat * > combined_sam_file ``` to combine the blocks into a single file.
 
@@ -128,9 +128,9 @@ If you are using BBMAP, please remember to explicitly specify the number of sear
    Example: python pairspark.py /s1/snagaraj/project_env/SRR639031_1.fastq /s1/snagaraj/project_env/SRR639031_2.fastq file:/s1/snagaraj/output/pair 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome --interleaved -"
 
 
-2) Run "chmod +x pairspark.sh" to give permissions
+2) Run ```chmod +x pairspark.sh ``` to give permissions
 
-3) Run ./pairspark.sh to run Spark as an interactive process or run "nohup ./pairspark.sh" to run Spark as a background process.
+3) Run ```./pairspark.sh``` to run Spark as an interactive process or run ```nohup ./pairspark.sh``` to run Spark as a background process.
 
 4) Go into your local output directory and run ``` cat * > combined_sam_file ``` to combine the blocks into a single file.
 
@@ -142,6 +142,8 @@ If you are familiar with Spark, you can also edit your spark-defaults.conf file 
 
 ### Validation Scripts
 
+Give permissions to the shell script you are using by running ```chmod +x ____.sh ```
+
 1) Valid_reads.sh/.py- Used to create new SAM files with only mapped reads. Can only used for single-end mapping.
 
 2) Reorder.sh/.py - Used to create new SAM files that are ordered according to read ID. Can only be used for single-end mapping.
@@ -149,6 +151,8 @@ If you are familiar with Spark, you can also edit your spark-defaults.conf file 
 3) Alternatively, use the [SAMtools](http://www.htslib.org/doc/samtools-sort.html) sort to sort by chromosome position or by read number.
 
 ### Hi-C shell script usage
+
+Give permissions to the shell script you are using by running ```chmod +x ____.sh ```
 
 Use interactions.sh for single-end/locally aligned SAM files and interactions_pair.sh for paired-end SAM files. These scripts are useful to create  interactions data(Hi-C) in the form:
 
