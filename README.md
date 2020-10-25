@@ -105,7 +105,7 @@ If you are using BBMAP, please remember to explicitly specify the number of sear
    
    Make sure that the full_path_to_sam_output_directory contains the prefix file: and that the SAM output directory does not already exist(remove it if it does). Executor and        driver memory should end with G to indicate Gigabytes or MB to indicate megabytes. The logging parameter should be passed either a Y or N for Yes or No. 
    
-   Example: ``` python singlespark.py /s1/snagaraj/project_env/SRR639031_1.fastq file:/s1/snagaraj/output/single 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome -" ```  
+   Example: ``` pipenv run python singlespark.py /s1/snagaraj/project_env/SRR639031_1.fastq file:/s1/snagaraj/sam_folder/bowtie 20G 100G 100 3 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 3 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome -" Bowtie2 N ```  
    
    See sample run file in scripts/singlespark.sh file for further examples.
 
@@ -125,7 +125,7 @@ If you are using BBMAP, please remember to explicitly specify the number of sear
    Make sure that the full_path_to_sam_output_directory contains the prefix file: and that the SAM output directory does not already exist(remove it if it does). Executor and        driver memory should end with G to indicate Gigabytes or MB to indicate megabytes.
    The logging parameter should be passed either a Y or N for Yes or No. 
    
-   Example: ```python pairspark.py /s1/snagaraj/project_env/SRR639031_1.fastq /s1/snagaraj/project_env/SRR639031_2.fastq file:/s1/snagaraj/output/pair 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome --interleaved -" ```
+   Example: ```python pairspark.py /s1/snagaraj/project_env/SRR639031_1.fastq /s1/snagaraj/project_env/SRR639031_2.fastq file:/s1/snagaraj/output/pair 20G 100G 100 2 "/s1/snagaraj/bowtie2/bowtie2 --no-hd --no-sq -p 2 -x /s1/snagaraj/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome --interleaved -" Y ```
 
 
 2) Run ```chmod +x pairspark.sh ``` to give permissions
