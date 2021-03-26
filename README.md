@@ -136,11 +136,10 @@ If you are using BBMAP, please remember to explicitly specify the number of sear
 
 ### Optimization of Spark Settings
 
-We have found that found that setting the number of spark executor instances equal to the number of worker nodes/machines running on your cluster produces optimal results. Furthermore, we have found that performance was optimized when the number of parallel search threads in the mapper-specific options for HISAT2, Tophat, and Bowtie2 was equal to the number of cores available on a single machine divided by the number of cores used by the Spark process on a single machine. For BBMAP, use 1-2 search threads for a smaller number of cores per machine.
+We have found that setting the number of spark executor instances equal to the number of active worker nodes/machines produces optimal results. Furthermore, performance was optimized when the number of parallel search threads in the mapper-specific options for HISAT2, Tophat, and Bowtie2 was approximately equal to the number of cores available on a single machine divided by the number of cores used by the Spark process on a single machine. When running HISAT2, Tophat, and Bowtie2 with maximum/near-maximum resources, use 2-3 search threads rather than 1. For BBMAP, use 1-2 search threads per machine.
 
 With STAR, you should set the number of threads equal to the number of cores you have available on each machine. This is because when running STAR the number of data partitions used when mapping should equal the number of executor instances you have(which you should specify as the number of machines on your cluster).
 
-If you are familiar with Spark, you can also edit your spark-defaults.conf file and specify the spark.executor.cores parameter for further optimization.
 
 ### Validation Scripts
 
